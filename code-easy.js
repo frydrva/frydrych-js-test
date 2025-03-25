@@ -13,18 +13,20 @@ function size(arrayInput) {
 
 // 3) Funkce co vrací opak poskytnutého boolean hodnoty v booleanInput
 function negate(booleanInput) {
-  return 
+  return !booleanInput;
 }
 
 // 4) Funkce co spojí (bez žádného přidaného znaku) dva textové řetězce string1 a string2 a vrátí je jako jeden string
 // například pro "Hello", "World" bude výsledek "HelloWorld"
 function join(string1, string2) {
-  return 
+  return string1 + string2;
 }
 
 // 5) Funkce co vrací hodnotu z pole arrayInput na indexu indexInput (od 0)
 // například pro ["apple", "banana", "kiwi", "orange", "strawberry"], 2 bude výsledek "kiwi"
-function get(arrayInput, indexInput) {}
+function get(arrayInput, indexInput) {
+  return arrayInput[indexInput];
+}
 
 // oblast volání funkcí
 const fruits = ["apple", "banana", "kiwi", "orange", "strawberry"];

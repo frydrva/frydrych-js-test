@@ -2,7 +2,13 @@
 
 // 1) Funkce co vrací string, který odpovídá slovu (jsou oddělena mezerou) ze stringInput na pozici dané wordIndex (od 1), pokud index není vyplněn pracuje se s prvním slovem, vrácené slovo bude velkými písmeny, pokud slovo na dané pozici neexistuje, vrátí se prázdný string
 // například pro "My cat is yellow?" a 3 bude výsledek "IS"
-function capitalizeWord(stringInput, wordIndex) {}
+function capitalizeWord(stringInput, wordIndex) {
+  const words = stringInput.split(' ');
+    if (wordIndex < 1 || wordIndex > words.length) {
+        return ''; 
+    }
+    return words[wordIndex - 1].toUpperCase();
+}
 
 // 2) Funkce co přijme testScore, a vrátí odpovídající známku podle následující tabulky:
 // 0-50 -> F, 51-60 -> E, 61-70 -> D, 71-80 -> C, 81-90 -> B, 91-100 -> A, pokud je testScore mimo rozsah 0-100, nebo nevalidní hodnota funkce vrátí "INVALID SCORE"
